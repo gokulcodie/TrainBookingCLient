@@ -1,0 +1,59 @@
+<mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+      <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+    </ng-container>
+
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+      <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="totalSeats">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Total seats </th>
+      <td mat-cell *matCellDef="let row"> {{row.totalSeats}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="bookedSeats">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Booked seats </th>
+      <td mat-cell *matCellDef="let row"> {{row.bookedSeats}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="startingPoint">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Starting point </th>
+      <td mat-cell *matCellDef="let row"> {{row.startingPoint}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="boardingPoint">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Boarding point</th>
+      <td mat-cell *matCellDef="let row"> {{row.boardingPoint}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ticketAmount">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Ticket amount </th>
+      <td mat-cell *matCellDef="let row"> {{row.ticketAmount}} </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    <!-- Row shown when there is no matching data. -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of trains"></mat-paginator>
+</div>
+

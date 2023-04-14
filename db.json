@@ -1,0 +1,84 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "trains": [
+    {
+      "id": 1,
+      "name": "train1",
+      "totalSeats": 1,
+      "bookedSeats": 1,
+      "startingPoint": "st1",
+      "boardingPoint": "dt1",
+      "ticketAmount": 100
+    },
+    {
+      "id": 2,
+      "name": "train2",
+      "totalSeats": 2,
+      "bookedSeats": 2,
+      "startingPoint": "st2",
+      "boardingPoint": "dt2",
+      "ticketAmount": 200
+    },
+    {
+      "id": 3,
+      "name": "train3",
+      "totalSeats": 3,
+      "bookedSeats": 3,
+      "startingPoint": "st3",
+      "boardingPoint": "dt3",
+      "ticketAmount": 300
+    },
+    {
+      "id": 4,
+      "name": "train4",
+      "totalSeats": 4,
+      "bookedSeats": 4,
+      "startingPoint": "st4",
+      "boardingPoint": "dt4",
+      "ticketAmount": 400
+    },
+    {
+      "id": 5,
+      "name": "train5",
+      "totalSeats": 5,
+      "bookedSeats": 5,
+      "startingPoint": "st5",
+      "boardingPoint": "dt5",
+      "ticketAmount": 500
+    },
+    {
+      "id": 6,
+      "name": "train6",
+      "totalSeats": 6,
+      "bookedSeats": 6,
+      "startingPoint": "st6",
+      "boardingPoint": "dt6",
+      "ticketAmount": 600
+    },
+    {
+      "id": "7",
+      "name": "train7",
+      "totalSeats": "700",
+      "bookedSeats": "150",
+      "startingPoint": "gorgan",
+      "boardingPoint": "delhi",
+      "ticketAmount": 700
+    }
+  ]
+}
